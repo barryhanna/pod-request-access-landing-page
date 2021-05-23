@@ -1,9 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Chivo&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chivo:wght@300;400&display=swap');
 
 :root {
   --clr-white: #c2cbe5;
-  --clr-dark-blue: #121725;
+  --clr-black: #121725;
   --clr-green: #54e6af;
+  --clr-light-blue: #5a668a;
+  --clr-dark-blue: #2c344b;
+
+  --spacer: 1em;
 }
 
 *,
@@ -16,12 +20,85 @@
 
 body {
   font-family: 'Chivo';
+  font-weight: 300;
   background: url('./assets/mobile/image-host.jpg') var(--clr-dark-blue);
   background-blend-mode: darken;
+
   color: var(--clr-white);
+  min-height: 100vh;
+}
+
+img {
+  display: block;
+  max-width: 100%;
 }
 
 header {
   display: flex;
   justify-content: center;
+}
+
+h1 {
+  font-size: 1.4rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  color: var(--clr-green);
+  text-align: center;
+  line-height: 2.375rem;
+  margin-left: calc(var(--spacer) * -3);
+  margin-right: calc(var(--spacer) * -3);
+}
+
+h1 span {
+  color: var(--clr-white);
+}
+
+p {
+  font-size: 0.8rem;
+  text-align: center;
+  line-height: 2;
+}
+
+.flow > * + * {
+  margin-top: var(--spacer);
+}
+.flow\:large > * + * {
+  margin-top: calc(var(--spacer) * 3);
+}
+.flow\:small > * + * {
+  margin-top: calc(var(--spacer) * 0.5);
+}
+
+.wrapper {
+  padding: calc(var(--spacer) * 2);
+}
+
+.social-icons {
+  display: flex;
+  color: var(--clr-light-blue);
+  justify-content: space-between;
+  gap: 0.25rem;
+}
+
+.social-icons > * {
+  width: 20%;
+  aspect-ratio: 3/1;
+}
+
+input {
+  display: block;
+  color: var(--clr-light-blue);
+  background-color: var(--clr-dark-blue);
+  width: 100%;
+  font-family: inherit;
+  padding: 1em 1.5em;
+  border: 0;
+  border-radius: 28px;
+}
+
+input[type='submit'] {
+  color: var(--clr-dark-blue);
+  background-color: var(--clr-green);
+  text-align: center;
+  box-shadow: 0px 25px 20px -20px rgba(84, 230, 175, 0.497913);
 }
