@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Chivo&display=swap');
+
+:root {
+  --clr-white: #c2cbe5;
+  --clr-dark-blue: #121725;
+  --clr-green: #54e6af;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Chivo';
+  background: url('./assets/mobile/image-host.jpg') var(--clr-dark-blue);
+  background-blend-mode: darken;
+  color: var(--clr-white);
+}
+
+header {
+  display: flex;
+  justify-content: center;
+}
