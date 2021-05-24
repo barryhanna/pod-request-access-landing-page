@@ -22,6 +22,7 @@ body {
   font-family: 'Chivo';
   font-weight: 300;
   background: url('./assets/mobile/image-host.jpg') var(--clr-dark-blue);
+  background-repeat: no-repeat;
   background-blend-mode: darken;
 
   color: var(--clr-white);
@@ -77,12 +78,11 @@ p {
   display: flex;
   color: var(--clr-light-blue);
   justify-content: space-between;
-  gap: 0.25rem;
+  gap: 0.4rem;
 }
 
-.social-icons > * {
-  width: 20%;
-  aspect-ratio: 3/1;
+.social-icons > img {
+  max-height: 1.0625rem;
 }
 
 input {
