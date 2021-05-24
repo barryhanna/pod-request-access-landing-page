@@ -11,10 +11,10 @@
 </head>
 
 <body>
-  <div class="wrapper flow:large">
-    <header>
-      <img src="./assets/desktop/logo.svg" alt="Pod Logo">
-    </header>
+  <header>
+    <img src="./assets/desktop/logo.svg" alt="Pod Logo">
+  </header>
+  <main class="wrapper flow:large">
     <h1>Publish&nbsp;your&nbsp;podcasts <br><span>everywhere.</span></h1>
     <p>
       Upload your audio to Pod with a single click. We’ll then distribute your podcast to Spotify,
@@ -27,10 +27,22 @@
       <img src="./assets/desktop/pocket-casts.svg" alt="Podcasts">
     </div>
     <form class="flow" action="#">
-      <input type="email" aria-label="email" placeholder="Email address" />
-      <input type="submit" value="Request access" />
+      <input type="email" aria-label="email" placeholder="Email address" required />
+      <input type="submit" value="Request access" id="submit" />
     </form>
+  </main>
+
+  <div class="bg-pattern">
+    <img src="./assets/desktop/bg-pattern-dots.svg" alt="">
   </div>
+
+  <script>
+    const form = document.getElementsByTagName('form')[0];
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      console.log('Form submitted');
+    });
+  </script>
 </body>
 
 </html>
