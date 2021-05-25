@@ -131,11 +131,15 @@ input[type='email'] {
   color: var(--clr-white);
 }
 
-input[type='email']:invalid::after {
-  content: 'Oops! Please check your email';
-  color: red;
-  top: 2rem;
+.invalid::after {
+  display: inline-block;
+  height: 100px;
+  width: 100px;
+  position: absolute;
   left: 0;
+  top: 2rem;
+  content: 'Oops! Please check your email';
+  color: #fb3e3e;
 }
 
 .bg-pattern {
@@ -219,13 +223,19 @@ input[type='email']:invalid::after {
 
 @media (min-width: 630px) {
   body {
+    position: relative;
     background-image: url('./assets/desktop/image-host.jpg');
     background-size: cover;
     background-position-x: 30%;
   }
 
+  .bg-pattern {
+    min-height: 160px;
+  }
+
   .bg-pattern > img {
     margin-left: auto;
+
     margin-top: calc(var(--spacer) * -3);
   }
 
