@@ -94,6 +94,7 @@ p {
 }
 
 input {
+  position: relative;
   display: block;
   color: var(--clr-light-blue);
   background-color: var(--clr-dark-blue);
@@ -131,15 +132,16 @@ input[type='email'] {
   color: var(--clr-white);
 }
 
-.invalid::after {
-  display: inline-block;
-  height: 100px;
-  width: 100px;
+input[type='email']:invalid::after {
   position: absolute;
+  font-weight: 400;
+  height: 100px;
+  width: max-content;
   left: 0;
   top: 2rem;
   content: 'Oops! Please check your email';
   color: #fb3e3e;
+  z-index: 5;
 }
 
 .bg-pattern {
@@ -171,6 +173,7 @@ input[type='email'] {
   .social-icons {
     width: 80%;
     order: 1;
+    overflow-x: visible;
   }
 
   .wrapper {
@@ -218,6 +221,7 @@ input[type='email'] {
     padding-left: calc(var(--spacer) * 2);
     margin-bottom: calc(var(--spacer) * -1);
     padding-top: var(--spacer);
+    min-height: 160px;
   }
 }
 
